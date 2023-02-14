@@ -3,19 +3,55 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3765BA94ABDA7B91F420ADF9 /* Pods_Food_Order_Application_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E32C5D02B85966BD5B94864 /* Pods_Food_Order_Application_iOS.framework */; };
+		5133576C299AFEC600169474 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5133576B299AFEC600169474 /* User.swift */; };
+		5133576F299AFF0F00169474 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5133576E299AFF0F00169474 /* Role.swift */; };
+		51335772299AFFF200169474 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51335771299AFFF200169474 /* Company.swift */; };
+		51335775299B006300169474 /* CompanyCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51335774299B006300169474 /* CompanyCategory.swift */; };
+		51335778299B00AB00169474 /* CustomLocationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51335777299B00AB00169474 /* CustomLocationClass.swift */; };
+		5133577B299B00FC00169474 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5133577A299B00FC00169474 /* Food.swift */; };
+		5133577E299B014000169474 /* FoodOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5133577D299B014000169474 /* FoodOrder.swift */; };
+		51335781299B015200169474 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51335780299B015200169474 /* Order.swift */; };
+		51335784299B049E00169474 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51335783299B049E00169474 /* LoginViewController.swift */; };
+		51335787299B04CC00169474 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51335786299B04CC00169474 /* RegisterViewController.swift */; };
+		5133578A299B0A2100169474 /* AdminHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51335789299B0A2100169474 /* AdminHomePageViewController.swift */; };
+		5133578D299B0A3600169474 /* CustomerHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5133578C299B0A3600169474 /* CustomerHomePageViewController.swift */; };
+		51335790299B0A4200169474 /* ManagerHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5133578F299B0A4200169474 /* ManagerHomePageViewController.swift */; };
+		51335843299B14C400169474 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51335842299B14C400169474 /* FirebaseAuth.framework */; };
+		51335845299B14C900169474 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51335844299B14C900169474 /* FirebaseDatabase.framework */; };
 		514B9E2E299AEA440034872F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514B9E2D299AEA440034872F /* AppDelegate.swift */; };
 		514B9E30299AEA440034872F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514B9E2F299AEA440034872F /* SceneDelegate.swift */; };
 		514B9E32299AEA440034872F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514B9E31299AEA440034872F /* ViewController.swift */; };
 		514B9E35299AEA440034872F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514B9E33299AEA440034872F /* Main.storyboard */; };
 		514B9E37299AEA450034872F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514B9E36299AEA450034872F /* Assets.xcassets */; };
 		514B9E3A299AEA450034872F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514B9E38299AEA450034872F /* LaunchScreen.storyboard */; };
+		514B9E47299AEE5F0034872F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 514B9E46299AEE5F0034872F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E32C5D02B85966BD5B94864 /* Pods_Food_Order_Application_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Order_Application_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		398A258ACA7F33E6C15E7E38 /* Pods-Food-Order-Application-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food-Order-Application-iOS.release.xcconfig"; path = "Target Support Files/Pods-Food-Order-Application-iOS/Pods-Food-Order-Application-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		5133576B299AFEC600169474 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5133576E299AFF0F00169474 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		51335771299AFFF200169474 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		51335774299B006300169474 /* CompanyCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCategory.swift; sourceTree = "<group>"; };
+		51335777299B00AB00169474 /* CustomLocationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationClass.swift; sourceTree = "<group>"; };
+		5133577A299B00FC00169474 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		5133577D299B014000169474 /* FoodOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOrder.swift; sourceTree = "<group>"; };
+		51335780299B015200169474 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		51335783299B049E00169474 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		51335786299B04CC00169474 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		51335789299B0A2100169474 /* AdminHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomePageViewController.swift; sourceTree = "<group>"; };
+		5133578C299B0A3600169474 /* CustomerHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHomePageViewController.swift; sourceTree = "<group>"; };
+		5133578F299B0A4200169474 /* ManagerHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerHomePageViewController.swift; sourceTree = "<group>"; };
+		5133581C299B124600169474 /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51335842299B14C400169474 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51335844299B14C900169474 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51335846299B14CD00169474 /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		514B9E2A299AEA440034872F /* Food-Order-Application-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food-Order-Application-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		514B9E2D299AEA440034872F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		514B9E2F299AEA440034872F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +60,8 @@
 		514B9E36299AEA450034872F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		514B9E39299AEA450034872F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		514B9E3B299AEA450034872F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		514B9E46299AEE5F0034872F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Documents/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F1864EEEBC130C77E709A4CD /* Pods-Food-Order-Application-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food-Order-Application-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Food-Order-Application-iOS/Pods-Food-Order-Application-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51335845299B14C900169474 /* FirebaseDatabase.framework in Frameworks */,
+				51335843299B14C400169474 /* FirebaseAuth.framework in Frameworks */,
+				3765BA94ABDA7B91F420ADF9 /* Pods_Food_Order_Application_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +83,8 @@
 			children = (
 				514B9E2C299AEA440034872F /* Food-Order-Application-iOS */,
 				514B9E2B299AEA440034872F /* Products */,
+				D6C154AF9935C0DDEAD930A7 /* Pods */,
+				76DF0F7A2B3B5F5DFEF48A28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +106,43 @@
 				514B9E36299AEA450034872F /* Assets.xcassets */,
 				514B9E38299AEA450034872F /* LaunchScreen.storyboard */,
 				514B9E3B299AEA450034872F /* Info.plist */,
+				514B9E46299AEE5F0034872F /* GoogleService-Info.plist */,
+				5133576B299AFEC600169474 /* User.swift */,
+				5133576E299AFF0F00169474 /* Role.swift */,
+				51335771299AFFF200169474 /* Company.swift */,
+				51335774299B006300169474 /* CompanyCategory.swift */,
+				51335777299B00AB00169474 /* CustomLocationClass.swift */,
+				5133577A299B00FC00169474 /* Food.swift */,
+				5133577D299B014000169474 /* FoodOrder.swift */,
+				51335780299B015200169474 /* Order.swift */,
+				51335783299B049E00169474 /* LoginViewController.swift */,
+				51335786299B04CC00169474 /* RegisterViewController.swift */,
+				51335789299B0A2100169474 /* AdminHomePageViewController.swift */,
+				5133578C299B0A3600169474 /* CustomerHomePageViewController.swift */,
+				5133578F299B0A4200169474 /* ManagerHomePageViewController.swift */,
 			);
 			path = "Food-Order-Application-iOS";
+			sourceTree = "<group>";
+		};
+		76DF0F7A2B3B5F5DFEF48A28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51335846299B14CD00169474 /* FirebaseStorage.framework */,
+				51335844299B14C900169474 /* FirebaseDatabase.framework */,
+				51335842299B14C400169474 /* FirebaseAuth.framework */,
+				5133581C299B124600169474 /* FirebaseStorage.framework */,
+				0E32C5D02B85966BD5B94864 /* Pods_Food_Order_Application_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6C154AF9935C0DDEAD930A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1864EEEBC130C77E709A4CD /* Pods-Food-Order-Application-iOS.debug.xcconfig */,
+				398A258ACA7F33E6C15E7E38 /* Pods-Food-Order-Application-iOS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 514B9E3E299AEA450034872F /* Build configuration list for PBXNativeTarget "Food-Order-Application-iOS" */;
 			buildPhases = (
+				32E02746B6A906D961F5061A /* [CP] Check Pods Manifest.lock */,
 				514B9E26299AEA440034872F /* Sources */,
 				514B9E27299AEA440034872F /* Frameworks */,
 				514B9E28299AEA440034872F /* Resources */,
+				2964127D0B0D230C1CCE1F75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				514B9E3A299AEA450034872F /* LaunchScreen.storyboard in Resources */,
+				514B9E47299AEE5F0034872F /* GoogleService-Info.plist in Resources */,
 				514B9E37299AEA450034872F /* Assets.xcassets in Resources */,
 				514B9E35299AEA440034872F /* Main.storyboard in Resources */,
 			);
@@ -132,14 +213,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2964127D0B0D230C1CCE1F75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Food-Order-Application-iOS/Pods-Food-Order-Application-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Food-Order-Application-iOS/Pods-Food-Order-Application-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Food-Order-Application-iOS/Pods-Food-Order-Application-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32E02746B6A906D961F5061A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Food-Order-Application-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		514B9E26299AEA440034872F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51335784299B049E00169474 /* LoginViewController.swift in Sources */,
+				5133577E299B014000169474 /* FoodOrder.swift in Sources */,
+				5133576C299AFEC600169474 /* User.swift in Sources */,
+				51335775299B006300169474 /* CompanyCategory.swift in Sources */,
 				514B9E32299AEA440034872F /* ViewController.swift in Sources */,
+				51335781299B015200169474 /* Order.swift in Sources */,
 				514B9E2E299AEA440034872F /* AppDelegate.swift in Sources */,
 				514B9E30299AEA440034872F /* SceneDelegate.swift in Sources */,
+				5133577B299B00FC00169474 /* Food.swift in Sources */,
+				5133576F299AFF0F00169474 /* Role.swift in Sources */,
+				51335787299B04CC00169474 /* RegisterViewController.swift in Sources */,
+				51335778299B00AB00169474 /* CustomLocationClass.swift in Sources */,
+				5133578A299B0A2100169474 /* AdminHomePageViewController.swift in Sources */,
+				5133578D299B0A3600169474 /* CustomerHomePageViewController.swift in Sources */,
+				51335790299B0A4200169474 /* ManagerHomePageViewController.swift in Sources */,
+				51335772299AFFF200169474 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,10 +419,12 @@
 		};
 		514B9E3F299AEA450034872F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1864EEEBC130C77E709A4CD /* Pods-Food-Order-Application-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = "Food-Order-Application-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,10 +439,12 @@
 		};
 		514B9E40299AEA450034872F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 398A258ACA7F33E6C15E7E38 /* Pods-Food-Order-Application-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = "Food-Order-Application-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
