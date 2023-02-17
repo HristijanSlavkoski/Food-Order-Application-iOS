@@ -17,10 +17,10 @@ class Order: Codable {
     var foodOrderArrayList: [FoodOrder]
     var comment: String
     var totalPrice: Double
-    var isOrderTaken: Bool
+    var orderTaken: Bool
     var timestampWhenOrderWillBeFinishedInMillis: Int64
     
-    init(userUUID: String, companyUUID: String, companyName: String, managerUUID: String, deliveryToHome: Bool, location: CustomLocationClass, foodOrderArrayList: [FoodOrder], comment: String, totalPrice: Double, isOrderTaken: Bool, timestampWhenOrderWillBeFinishedInMillis: Int64) {
+    init(userUUID: String, companyUUID: String, companyName: String, managerUUID: String, deliveryToHome: Bool, location: CustomLocationClass, foodOrderArrayList: [FoodOrder], comment: String, totalPrice: Double, orderTaken: Bool, timestampWhenOrderWillBeFinishedInMillis: Int64) {
         self.userUUID = userUUID
         self.companyUUID = companyUUID
         self.companyName = companyName
@@ -30,7 +30,7 @@ class Order: Codable {
         self.foodOrderArrayList = foodOrderArrayList
         self.comment = comment
         self.totalPrice = totalPrice
-        self.isOrderTaken = isOrderTaken
+        self.orderTaken = orderTaken
         self.timestampWhenOrderWillBeFinishedInMillis = timestampWhenOrderWillBeFinishedInMillis
     }
 }

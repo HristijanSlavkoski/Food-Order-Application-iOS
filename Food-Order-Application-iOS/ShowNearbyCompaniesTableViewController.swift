@@ -1,27 +1,28 @@
 //
-//  CustomerHomePageViewController.swift
+//  ShowNearbyCompaniesTableViewController.swift
 //  Food-Order-Application-iOS
 //
-//  Created by Hristijan Slavkoski on 2/14/23.
+//  Created by Hristijan Slavkoski on 2/17/23.
 //
 
 import UIKit
+import MapKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class CustomerHomePageViewController: UIViewController {
+class ShowNearbyCompaniesTableViewController: UIViewController {
+
     
+    @IBOutlet weak var mapView: MKMapView!
     var firebaseAuth: Auth!
     var firebaseUser: FirebaseAuth.User!
     var firebaseDatabase: Database!
     var databaseReference: DatabaseReference!
     var companies = [Company]()
     var companyIds = [String]()
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         firebaseAuth = Auth.auth()
         firebaseUser = firebaseAuth.currentUser
         firebaseDatabase = Database.database()
@@ -68,23 +69,22 @@ class CustomerHomePageViewController: UIViewController {
                     let company = Company(name: name!, imageUrl: imageUrl!, category: category, location: location, workingAtWeekends: workingAtWeekends!, workingAtNight: workingAtNight!, offersDelivery: offersDelivery!, foodArray: foodArray, managerUUID: managerUUID!, isApproved: isApproved!)
                     self.companies.append(company)
                     self.companyIds.append(companyId!)
-                    self.tableView.reloadData()
                 }
             }
         })
-        let nib = UINib(nibName: "CompanyCustomerTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "companyCustomerTableViewCell")
-        tableView.delegate = self
-        tableView.dataSource = self
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "makeOrderSegue" {
-            let destinationVC = segue.destination as! MakeOrderCustomerViewController
-            let companyToBeSent = sender as! CompanyToBeSent
-            destinationVC.company = companyToBeSent.company
-            destinationVC.companyId = companyToBeSent.companyId
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        for (index, company) in companies.enumerated() {
+            let annotation = MKPointAnnotation()
+            annotation.title = company.name
+            annotation.coordinate = CLLocationCoordinate2D(latitude: company.location.latitude, longitude: company.location.longitude)
+            mapView.addAnnotation(annotation)
         }
+        let region = MKCoordinateRegion(center: mapView.annotations.first!.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        mapView.setRegion(region, animated: true)
+        mapView.delegate = self
     }
     
     @IBAction func logoutClicked(_ sender: Any) {
@@ -102,75 +102,24 @@ class CustomerHomePageViewController: UIViewController {
             self.performSegue(withIdentifier: "logoutSuccess", sender: nil)
         }
     }
-}
-
-extension CustomerHomePageViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("you tapped me!")
-    }
-}
-
-extension CustomerHomePageViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return companies.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "companyCustomerTableViewCell", for: indexPath) as! CompanyCustomerTableViewCell
-        let company = companies[indexPath.row]
-        cell.title.text = company.name
-        cell.category.text = company.category.rawValue
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 8
-        cell.clipsToBounds = true
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "makeOrderSegue" {
+            let destinationVC = segue.destination as! MakeOrderCustomerViewController
+            let companyToBeSent = sender as! CompanyToBeSent
+            destinationVC.company = companyToBeSent.company
+            destinationVC.companyId = companyToBeSent.companyId
+        }
+    }
+}
+
+extension ShowNearbyCompaniesTableViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let annotationTitle = view.annotation?.title else { return }
         
-        let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: Date())
-        let minute = calendar.component(.minute, from: Date())
-        let dayOfWeek = calendar.component(.weekday, from: Date())
-
-        if !company.workingAtNight {
-            if hour >= 7 {
-                cell.workingNow.text = "Closes at 00:00"
-                cell.workingNow.backgroundColor = .green
-            } else {
-                cell.workingNow.text = "Opens at 08:00"
-                cell.workingNow.backgroundColor = .red
-            }
-        } else {
-            cell.workingNow.text = "Working 24/7"
-            cell.workingNow.backgroundColor = .green
+        for (index, company) in companies.enumerated() where company.name == annotationTitle {
+            let companyToBeSent = CompanyToBeSent(company: company, companyId: companyIds[index])
+            performSegue(withIdentifier: "makeOrderSegue", sender: companyToBeSent)
         }
-
-        if !company.workingAtWeekends {
-            if dayOfWeek == 7 || dayOfWeek == 1 {
-                cell.workingNow.text = "Closed during weekends"
-                cell.workingNow.backgroundColor = .red
-            }
-        }
-
-        if company.offersDelivery {
-            cell.offersDelivery.text = "Delivery available"
-            cell.offersDelivery.backgroundColor = .green
-        } else {
-            cell.offersDelivery.text = "Delivery is not available"
-            cell.offersDelivery.backgroundColor = .red
-        }
-        
-        cell.buttonAction = { [weak self] cell in
-            let alert = UIAlertController(title: "Confirm", message: "Order food from this company?", preferredStyle: .alert)
-            let confirmAction = UIAlertAction(title: "Confirm", style: .default) { _ in
-                let companyToBeSent = CompanyToBeSent(company: (self?.companies[indexPath.row])!, companyId: self!.companyIds[indexPath.row])
-                self!.performSegue(withIdentifier: "makeOrderSegue", sender: companyToBeSent)
-            }
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alert.addAction(confirmAction)
-            alert.addAction(cancelAction)
-            self?.present(alert, animated: true, completion: nil)
-        }
-        cell.button.setTitle("Order food", for: .normal)
-        cell.button.backgroundColor = UIColor.blue
-        return cell
     }
 }

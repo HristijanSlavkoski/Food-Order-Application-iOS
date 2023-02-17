@@ -7,9 +7,9 @@ target 'Food-Order-Application-iOS' do
   pod 'FirebaseAuth'
   pod 'FirebaseDatabase'
   pod 'FirebaseMessaging'
-  pod 'FirebaseCore'
   pod 'FirebaseFirestore'
   pod 'Firebase'
+  pod 'AlamofireImage'
   
   # Pods for Food-Order-Application-iOS
 
