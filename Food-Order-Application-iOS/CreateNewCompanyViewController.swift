@@ -94,7 +94,7 @@ class CreateNewCompanyViewController: UIViewController, UIPickerViewDelegate, UI
         let offersDelivery = offersDeliverySwitch.isOn
         
         if !(name?.isEmpty ?? true) && category != nil && latitude != 0.0 && longitude != 0.0 {
-            let company = Company(name: name!, imageUrl: "", category: category, location: CustomLocationClass(longitude: longitude, latitude: latitude), workingAtWeekends: workingAtWeekends, workingAtNight: workingAtNight, offersDelivery: offersDelivery, foodArray:foodArray, managerUUID: firebaseAuth.currentUser!.uid, isApproved: false)
+            let company = Company(name: name!, imageUrl: "", category: category, location: CustomLocationClass(longitude: longitude, latitude: latitude), workingAtWeekends: workingAtWeekends, workingAtNight: workingAtNight, offersDelivery: offersDelivery, foodArray:foodArray, managerUUID: firebaseAuth.currentUser!.uid, approved: false)
             let encoder = JSONEncoder()
             
             if let data = try? encoder.encode(company) {

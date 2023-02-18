@@ -17,9 +17,9 @@ class Company: Codable {
     var offersDelivery: Bool
     var foodArray: [Food]
     var managerUUID: String
-    var isApproved: Bool
+    var approved: Bool
 
-    init(name: String, imageUrl: String, category: CompanyCategory, location: CustomLocationClass, workingAtWeekends: Bool, workingAtNight: Bool, offersDelivery: Bool, foodArray: [Food], managerUUID: String, isApproved: Bool) {
+    init(name: String, imageUrl: String, category: CompanyCategory, location: CustomLocationClass, workingAtWeekends: Bool, workingAtNight: Bool, offersDelivery: Bool, foodArray: [Food], managerUUID: String, approved: Bool) {
         self.name = name
         self.imageUrl = imageUrl
         self.category = category
@@ -29,7 +29,7 @@ class Company: Codable {
         self.offersDelivery = offersDelivery
         self.foodArray = foodArray
         self.managerUUID = managerUUID
-        self.isApproved = isApproved
+        self.approved = approved
     }
 }
 

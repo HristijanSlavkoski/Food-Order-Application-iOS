@@ -63,9 +63,9 @@ class CustomerHomePageViewController: UIViewController {
                     foodArray.append(food)
                 }
                 let managerUUID = companyDictionary?["managerUUID"] as? String
-                let isApproved = companyDictionary?["approved"] as? Bool
-                if isApproved == true {
-                    let company = Company(name: name!, imageUrl: imageUrl!, category: category, location: location, workingAtWeekends: workingAtWeekends!, workingAtNight: workingAtNight!, offersDelivery: offersDelivery!, foodArray: foodArray, managerUUID: managerUUID!, isApproved: isApproved!)
+                let approved = companyDictionary?["approved"] as? Bool
+                if approved == true {
+                    let company = Company(name: name!, imageUrl: imageUrl!, category: category, location: location, workingAtWeekends: workingAtWeekends!, workingAtNight: workingAtNight!, offersDelivery: offersDelivery!, foodArray: foodArray, managerUUID: managerUUID!, approved: approved!)
                     self.companies.append(company)
                     self.companyIds.append(companyId!)
                     self.tableView.reloadData()

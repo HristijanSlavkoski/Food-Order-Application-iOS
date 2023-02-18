@@ -822,7 +822,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWq-db-T5h">
-                                <rect key="frame" x="0.0" y="906" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Ezu-7E-2PG"/>
                                 </constraints>
@@ -1030,9 +1030,9 @@
         <segue reference="0sP-oi-nSi"/>
         <segue reference="PXO-bh-rzj"/>
         <segue reference="53L-nb-XrQ"/>
-        <segue reference="nXp-RR-AVU"/>
+        <segue reference="bQJ-mM-q26"/>
         <segue reference="HVR-0H-rJS"/>
-        <segue reference="juA-Bi-CF8"/>
+        <segue reference="6K7-uD-2Nr"/>
         <segue reference="sRt-hX-2QU"/>
     </inferredMetricsTieBreakers>
     <resources>

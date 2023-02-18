@@ -83,7 +83,7 @@ class RegisterViewController: UIViewController {
                             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                         } else {
-                            let message = "User created: \(String(describing: user?.email))"
+                            let message = "User created: \(String(email))"
                             let alert = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
                             let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
                                 if newUser.role == Role.CUSTOMER {

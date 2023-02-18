@@ -63,9 +63,9 @@ class ManagerHomePageViewController: UIViewController {
                     foodArray.append(food)
                 }
                 let managerUUID = companyDictionary?["managerUUID"] as? String
-                let isApproved = companyDictionary?["approved"] as? Bool
+                let approved = companyDictionary?["approved"] as? Bool
                 if managerUUID == self.firebaseUser.uid {
-                    let company = Company(name: name!, imageUrl: imageUrl!, category: category, location: location, workingAtWeekends: workingAtWeekends!, workingAtNight: workingAtNight!, offersDelivery: offersDelivery!, foodArray: foodArray, managerUUID: managerUUID!, isApproved: isApproved!)
+                    let company = Company(name: name!, imageUrl: imageUrl!, category: category, location: location, workingAtWeekends: workingAtWeekends!, workingAtNight: workingAtNight!, offersDelivery: offersDelivery!, foodArray: foodArray, managerUUID: managerUUID!, approved: approved!)
                     self.companies.append(company)
                     self.companyIds.append(companyId!)
                     self.tableView.reloadData()
@@ -115,7 +115,7 @@ extension ManagerHomePageViewController: UITableViewDataSource {
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
         cell.clipsToBounds = true
-        if company.isApproved {
+        if company.approved {
             cell.approved.text = "Approved"
             cell.backgroundColor = UIColor.green
         }

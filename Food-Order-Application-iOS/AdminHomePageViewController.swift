@@ -63,8 +63,8 @@ class AdminHomePageViewController: UIViewController {
                     foodArray.append(food)
                 }
                 let managerUUID = companyDictionary?["managerUUID"] as? String
-                let isApproved = companyDictionary?["approved"] as? Bool
-                let company = Company(name: name!, imageUrl: imageUrl!, category: category, location: location, workingAtWeekends: workingAtWeekends!, workingAtNight: workingAtNight!, offersDelivery: offersDelivery!, foodArray: foodArray, managerUUID: managerUUID!, isApproved: isApproved!)
+                let approved = companyDictionary?["approved"] as? Bool
+                let company = Company(name: name!, imageUrl: imageUrl!, category: category, location: location, workingAtWeekends: workingAtWeekends!, workingAtNight: workingAtNight!, offersDelivery: offersDelivery!, foodArray: foodArray, managerUUID: managerUUID!, approved: approved!)
                 self.companies.append(company)
                 self.companyIds.append(companyId!)
                 self.tableView.reloadData()
@@ -126,7 +126,7 @@ extension AdminHomePageViewController: UITableViewDataSource {
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
         cell.clipsToBounds = true
-        if company.isApproved {
+        if company.approved {
             cell.approved.text = "Approved"
             cell.backgroundColor = UIColor.green
             cell.button.setTitle("Approved", for: .normal)
@@ -144,7 +144,7 @@ extension AdminHomePageViewController: UITableViewDataSource {
             let confirmAction = UIAlertAction(title: "Confirm", style: .default) { _ in
                 let id = self!.companyIds[indexPath.row]
                 self?.databaseReference.child("company").child(id).updateChildValues(["approved": true])
-                self?.companies[indexPath.row].isApproved = true
+                self?.companies[indexPath.row].approved = true
                 self?.tableView.reloadData()
             }
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
