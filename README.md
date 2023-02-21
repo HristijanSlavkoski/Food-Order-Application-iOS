@@ -15,4 +15,4 @@ While for manager and customer you need to create new users. There are predefine
 <b>Short description of the application</b><br>
 The application enables managers to create companies that offer food services. Upon creation of a company, an admin review process is initiated for approval. Once approved, customers can view the list of approved companies and place orders for food. The manager of the respective company receives the order and can set a time for preparing the food. Once the order is taken, the customer is informed of the order status and the estimated time of readiness. The customer can collect the food once it is ready. <br>
 Here is short demo of the application:
-https://drive.google.com/file/d/147DJTlwvOoOLdS9O5H9WLau1rK4WDcoS/view
+https://drive.google.com/file/d/1nkv2Ofk2hOPxuMs_D3B4v-VTxpzMMBhV/view
